@@ -13,7 +13,7 @@ def log_packet(packet):
     if IP in packet:
         packet_info += f", Source IP: {packet[IP].src}, Destination IP: {packet[IP].dst}"
 
-    # Get more stuff from each packet
+    # Get more stuff from each packet (TCP, UDP etc.)
         if TCP in packet:
             packet_info += f", Source Port: {packet[TCP].sport}, Destination Port: {packet[TCP].dport}, Protocol: TCP"
         elif UDP in packet:
